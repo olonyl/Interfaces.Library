@@ -17,6 +17,48 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FutureProofing.Person.Libra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FutureProofing.People.Viewer", "FutureProofing.People.Viewer\FutureProofing.People.Viewer.csproj", "{ADB0789F-0A20-456E-8465-13DA9CAF591E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RepositoryPattern", "RepositoryPattern", "{59A10274-96E6-4207-A3E9-FFD4BAAFD40B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repositories", "Repositories", "{9655C10C-08B2-4655-8EE7-A5FD26903CC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "People.Repository.Itnerface", "Person.Repository.Itnerface\People.Repository.Itnerface.csproj", "{269D9185-8512-442B-910D-3191D5C6D9FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{658BD93C-0CB5-42BB-B836-71F566A6BA5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "People.Viewer", "People.Viewer\People.Viewer.csproj", "{0F67BA65-915C-4649-BBD1-8F8F414EE785}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "People.Repository.Service", "People.Repository.Service\People.Repository.Service.csproj", "{25F02A9B-74C4-456D-B7F9-442F7AF9AAD8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{27621EA3-9C7D-4D45-9F27-BCED69EE40DA} = {27621EA3-9C7D-4D45-9F27-BCED69EE40DA}
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "People.WCFService", "People.WCFService\", "{27621EA3-9C7D-4D45-9F27-BCED69EE40DA}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
+		ProjectReferences = "{269d9185-8512-442b-910d-3191d5c6d9fe}|Person.Repository.Itnerface.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_49169"
+		Debug.AspNetCompiler.PhysicalPath = "People.WCFService\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49169\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_49169"
+		Release.AspNetCompiler.PhysicalPath = "People.WCFService\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49169\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "49169"
+		SlnRelativePath = "People.WCFService\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "People.Repository.CSV", "People.Repository.CSV\People.Repository.CSV.csproj", "{5BBD21C0-CBE7-4A61-A126-E1FF9077EDA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "People.Repository.SQL", "People.Repository.SQL\People.Repository.SQL.csproj", "{1334DFD9-D8FD-41BD-94AB-AA355D7B4181}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +85,30 @@ Global
 		{ADB0789F-0A20-456E-8465-13DA9CAF591E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADB0789F-0A20-456E-8465-13DA9CAF591E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADB0789F-0A20-456E-8465-13DA9CAF591E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{269D9185-8512-442B-910D-3191D5C6D9FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{269D9185-8512-442B-910D-3191D5C6D9FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{269D9185-8512-442B-910D-3191D5C6D9FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{269D9185-8512-442B-910D-3191D5C6D9FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F67BA65-915C-4649-BBD1-8F8F414EE785}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F67BA65-915C-4649-BBD1-8F8F414EE785}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F67BA65-915C-4649-BBD1-8F8F414EE785}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F67BA65-915C-4649-BBD1-8F8F414EE785}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25F02A9B-74C4-456D-B7F9-442F7AF9AAD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25F02A9B-74C4-456D-B7F9-442F7AF9AAD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25F02A9B-74C4-456D-B7F9-442F7AF9AAD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25F02A9B-74C4-456D-B7F9-442F7AF9AAD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27621EA3-9C7D-4D45-9F27-BCED69EE40DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27621EA3-9C7D-4D45-9F27-BCED69EE40DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27621EA3-9C7D-4D45-9F27-BCED69EE40DA}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{27621EA3-9C7D-4D45-9F27-BCED69EE40DA}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{5BBD21C0-CBE7-4A61-A126-E1FF9077EDA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BBD21C0-CBE7-4A61-A126-E1FF9077EDA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BBD21C0-CBE7-4A61-A126-E1FF9077EDA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BBD21C0-CBE7-4A61-A126-E1FF9077EDA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1334DFD9-D8FD-41BD-94AB-AA355D7B4181}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1334DFD9-D8FD-41BD-94AB-AA355D7B4181}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1334DFD9-D8FD-41BD-94AB-AA355D7B4181}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1334DFD9-D8FD-41BD-94AB-AA355D7B4181}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +119,14 @@ Global
 		{19F0F920-EEFA-4E56-ACD3-1F2B03405DD7} = {541454FC-1144-4A2D-871C-4DD9026E683E}
 		{3AB5173B-B0B2-4A0D-93CA-707D15BF55AE} = {2B3D62D6-213A-48FA-AC8C-E46EABEFE44F}
 		{ADB0789F-0A20-456E-8465-13DA9CAF591E} = {2B3D62D6-213A-48FA-AC8C-E46EABEFE44F}
+		{9655C10C-08B2-4655-8EE7-A5FD26903CC4} = {59A10274-96E6-4207-A3E9-FFD4BAAFD40B}
+		{269D9185-8512-442B-910D-3191D5C6D9FE} = {9655C10C-08B2-4655-8EE7-A5FD26903CC4}
+		{658BD93C-0CB5-42BB-B836-71F566A6BA5D} = {59A10274-96E6-4207-A3E9-FFD4BAAFD40B}
+		{0F67BA65-915C-4649-BBD1-8F8F414EE785} = {59A10274-96E6-4207-A3E9-FFD4BAAFD40B}
+		{25F02A9B-74C4-456D-B7F9-442F7AF9AAD8} = {9655C10C-08B2-4655-8EE7-A5FD26903CC4}
+		{27621EA3-9C7D-4D45-9F27-BCED69EE40DA} = {658BD93C-0CB5-42BB-B836-71F566A6BA5D}
+		{5BBD21C0-CBE7-4A61-A126-E1FF9077EDA6} = {9655C10C-08B2-4655-8EE7-A5FD26903CC4}
+		{1334DFD9-D8FD-41BD-94AB-AA355D7B4181} = {9655C10C-08B2-4655-8EE7-A5FD26903CC4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8B77C21D-40EF-463D-A613-6A302AC29114}

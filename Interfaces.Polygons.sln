@@ -69,6 +69,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DynamicRepository", "Dynami
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicRepository.WPFApplication", "DynamicRepository.WPFApplication\DynamicRepository.WPFApplication.csproj", "{F128FCC2-6BCE-4B82-ACB6-64C254093538}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonRepository.Fake", "PersonRepository.Fake\PersonRepository.Fake.csproj", "{997DC7D2-B20E-4A80-9842-6FF15BE4A12B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleViewer.Test", "PeopleViewer.Test\PeopleViewer.Test.csproj", "{BD3F6616-867D-47C4-A170-2CCA4EE4EB38}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -131,6 +135,14 @@ Global
 		{F128FCC2-6BCE-4B82-ACB6-64C254093538}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F128FCC2-6BCE-4B82-ACB6-64C254093538}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F128FCC2-6BCE-4B82-ACB6-64C254093538}.Release|Any CPU.Build.0 = Release|Any CPU
+		{997DC7D2-B20E-4A80-9842-6FF15BE4A12B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{997DC7D2-B20E-4A80-9842-6FF15BE4A12B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{997DC7D2-B20E-4A80-9842-6FF15BE4A12B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{997DC7D2-B20E-4A80-9842-6FF15BE4A12B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD3F6616-867D-47C4-A170-2CCA4EE4EB38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD3F6616-867D-47C4-A170-2CCA4EE4EB38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD3F6616-867D-47C4-A170-2CCA4EE4EB38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD3F6616-867D-47C4-A170-2CCA4EE4EB38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -152,6 +164,8 @@ Global
 		{051AD778-12BE-40A0-869F-87E36D35FB51} = {2B5B76AA-E491-48B3-AAC4-712D08D81AB9}
 		{045D3373-96B2-48C9-A82C-733D856093CA} = {2B5B76AA-E491-48B3-AAC4-712D08D81AB9}
 		{F128FCC2-6BCE-4B82-ACB6-64C254093538} = {8A281AF6-7641-4202-A801-BDCECE5452E5}
+		{997DC7D2-B20E-4A80-9842-6FF15BE4A12B} = {8A281AF6-7641-4202-A801-BDCECE5452E5}
+		{BD3F6616-867D-47C4-A170-2CCA4EE4EB38} = {8A281AF6-7641-4202-A801-BDCECE5452E5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8B77C21D-40EF-463D-A613-6A302AC29114}

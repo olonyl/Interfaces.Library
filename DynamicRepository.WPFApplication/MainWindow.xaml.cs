@@ -1,5 +1,4 @@
-﻿using People.Repository.Itnerface;
-using System.Windows;
+﻿using System.Windows;
 
 namespace DynamicRepository.WPFApplication
 {
@@ -8,36 +7,31 @@ namespace DynamicRepository.WPFApplication
     /// </summary>
     public partial class MainWindow : Window
     {
+        private readonly MainViewModel _viewModel;
+
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void ClearButton_Click(object sender, RoutedEventArgs e)
-        {
-
+            _viewModel = new MainViewModel();
+            this.DataContext = _viewModel;
         }
 
         private void DynamicReposositoryButton_Click(object sender, RoutedEventArgs e)
         {
-            ClearListBox();
-            IPersonRepository repository = RepositoryFactory.GetRepository();
-            var peopple = repository.GetPeople();
-            PersonListBox.ItemsSource = peopple;
-            ShowRepositoryType(repository);
+            _viewModel.FetchData();
+            ShowRepositoryType();
 
         }
 
-        private void ClearListBox()
+        private void ClearButton_Click(object sender, RoutedEventArgs e)
         {
-            this.PersonListBox.ItemsSource = null;
+            _viewModel.ClearData();
         }
 
-
-        private void ShowRepositoryType(IPersonRepository repository)
+        private void ShowRepositoryType()
         {
             MessageBox.Show(string.Format("Repositry Type:\n{0}",
-                repository.GetType().ToString()));
+                _viewModel.RepositoryType));
         }
     }
 }

@@ -56,7 +56,14 @@
                 </StackPanel>
             </Button.Content>
         </Button>
-        <ListBox x:Name="PersonListBox" HorizontalAlignment="Left" Height="410" Margin="347,0,0,0" VerticalAlignment="Top" Width="437" ItemsSource="{Binding Person}">
+        <ListBox x:Name="PersonListBox" HorizontalAlignment="Left" 
+                 Grid.Column="1" Grid.Row="0" Grid.RowSpan="5"
+                 BorderBrush="DarkSlateGray" 
+                 ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                 Height="410" Margin="347,0,0,0" 
+                 VerticalAlignment="Top" 
+                 Width="437" 
+                 ItemsSource="{Binding People}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>

@@ -1,0 +1,71 @@
+﻿<Window x:Class="DynamicRepository.WPFApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DynamicRepository.WPFApplication"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="#373737" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontSize" Value="15" />
+            <Setter Property="SnapsToDevicePixels" Value="True" />
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border CornerRadius="4" Background="{TemplateBinding Background}">
+                            <Grid>
+                                <Path x:Name="PathIcon" Width="15" Height="25" Stretch="Fill" Fill="#4C87B3" HorizontalAlignment="Left" Margin="17,0,0,0" Data="F1 M 30.0833,22.1667L 50.6665,37.6043L 50.6665,38.7918L 30.0833,53.8333L 30.0833,22.1667 Z "/>
+                                <ContentPresenter x:Name="MyContentPresenter" Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" />
+                            </Grid>
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#E59400" />
+                                <Setter Property="Foreground" Value="White" />
+                                <Setter TargetName="PathIcon" Property="Fill" Value="Black" />
+                            </Trigger>
+
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="OrangeRed" />
+                                <Setter Property="Foreground" Value="White" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="420" Stroke="Black" VerticalAlignment="Top" Width="342"/>
+        <Button x:Name="DynamicReposositoryButton"  HorizontalAlignment="Left" Margin="44,40,0,0" VerticalAlignment="Top" Width="250" Height="81" Click="DynamicReposositoryButton_Click">
+            <Button.Content>
+                <StackPanel>
+                    <TextBlock Text="Dynamic Repository" FontSize="20" />
+                </StackPanel>
+            </Button.Content>
+        </Button>
+        <Button x:Name="ClearButton" HorizontalAlignment="Left" Margin="44,307,0,0" VerticalAlignment="Top" Width="250" Height="81" Click="ClearButton_Click" >
+            <Button.Content>
+                <StackPanel>
+                    <TextBlock Text="Clear Data" FontSize="20" />
+                </StackPanel>
+            </Button.Content>
+        </Button>
+        <ListBox x:Name="PersonListBox" HorizontalAlignment="Left" Height="410" Margin="347,0,0,0" VerticalAlignment="Top" Width="437" ItemsSource="{Binding Person}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding FirstName}" FontSize="22" Width="200"/>
+                        <TextBlock Text="{Binding StartDate.Year}" TextAlignment="Right"/>
+                        <TextBlock Text="{Binding Rating}" TextAlignment="Right"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Window>

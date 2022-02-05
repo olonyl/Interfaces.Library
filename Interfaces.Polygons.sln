@@ -65,6 +65,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExplicitImplementation.Libr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExplicitImplementation.ConsoleApp", "ExplicitImplementation.ConsoleApp\ExplicitImplementation.ConsoleApp.csproj", "{045D3373-96B2-48C9-A82C-733D856093CA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DynamicRepository", "DynamicRepository", "{8A281AF6-7641-4202-A801-BDCECE5452E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicRepository.WPFApplication", "DynamicRepository.WPFApplication\DynamicRepository.WPFApplication.csproj", "{F128FCC2-6BCE-4B82-ACB6-64C254093538}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +127,10 @@ Global
 		{045D3373-96B2-48C9-A82C-733D856093CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{045D3373-96B2-48C9-A82C-733D856093CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{045D3373-96B2-48C9-A82C-733D856093CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F128FCC2-6BCE-4B82-ACB6-64C254093538}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F128FCC2-6BCE-4B82-ACB6-64C254093538}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F128FCC2-6BCE-4B82-ACB6-64C254093538}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F128FCC2-6BCE-4B82-ACB6-64C254093538}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -143,6 +151,7 @@ Global
 		{1334DFD9-D8FD-41BD-94AB-AA355D7B4181} = {9655C10C-08B2-4655-8EE7-A5FD26903CC4}
 		{051AD778-12BE-40A0-869F-87E36D35FB51} = {2B5B76AA-E491-48B3-AAC4-712D08D81AB9}
 		{045D3373-96B2-48C9-A82C-733D856093CA} = {2B5B76AA-E491-48B3-AAC4-712D08D81AB9}
+		{F128FCC2-6BCE-4B82-ACB6-64C254093538} = {8A281AF6-7641-4202-A801-BDCECE5452E5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8B77C21D-40EF-463D-A613-6A302AC29114}

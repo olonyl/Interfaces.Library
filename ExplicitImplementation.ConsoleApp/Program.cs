@@ -41,4 +41,5 @@ namespace ExplicitImplementation.ConsoleApp
             Console.Read();
         }
     }
+
 }
